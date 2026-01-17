@@ -14,12 +14,13 @@ body {
 }
 
 .navbar {
-    background-color: #222;
+    background-color: #fdf4e9;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     flex-wrap: wrap;
+    box-shadow: 0px 0px 1px black;
 }
 
 .logo {
@@ -27,6 +28,7 @@ body {
     color: #fff;
     font-weight: bold;
     margin-bottom: 10px;
+    border-radius: 50%;
 }
 
 .navbar-list {
@@ -39,7 +41,7 @@ body {
 
 .navelements a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-size: 16px;
 }
 
@@ -61,7 +63,7 @@ body {
 }
 
 button {
-    background-color: orange;
+  background-color: rgb(212, 29, 29);
     border: none;
     padding: 15px 10%;
     color: white;
@@ -76,9 +78,35 @@ footer {
     padding: 25px;
     text-align: center;
     font-size: 18px;
-    color: #fff;
-    background-color: #222;
+    color: black;
+    background-color: #fdf4e9;
     margin-top: auto;
+      box-shadow: 0px 0px 1px black;
+}
+
+.btn1 {
+  background-color: rgb(212, 29, 29);
+}
+.btn2 {
+      background-color: rgb(24, 81, 134);
+}
+.btn3 {
+      background-color: rgb(20, 124, 20);
+}
+.btn4 {
+      background-color: rgb(148, 29, 148);
+}
+
+a {
+    text-decoration: none;
+}
+
+a button {
+    cursor: pointer;
+}
+
+a button:hover {
+    background-color: #fff;
 }
 
 @media (max-width: 768px) {
