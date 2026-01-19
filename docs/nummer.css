@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -11,6 +11,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
 
 /* Navbar */
@@ -19,90 +20,106 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 20px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0px 0px 1px black;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  border-radius: 12px;
 }
 
 .logo {
-  font-size: 18px;
-  color: #fff;
+  font-size: 22px;
+  color: #111;
   font-weight: bold;
 }
 
 .navbar-list {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   list-style: none;
   flex-wrap: wrap;
 }
 
 .navelements a {
-  text-decoration: none;
-  color: black;
+  text-decoration: none; /* fjernet understrek */
+  color: #111;
   font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navelements a:hover {
+  background-color: rgba(212,29,29,0.15);
+  transform: translateY(-2px);
 }
 
 /* Container */
 .container {
   max-width: 800px;
   margin: 60px auto;
-  padding: 20px;
+  padding: 35px;
   text-align: center;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .container h1 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 2rem;
 }
 
 .container p {
-  line-height: 1.5;
+  line-height: 1.8;
+  color: #333;
 }
 
-/* Button */
+/* Buttons */
 button {
-  background-color: rgb(212, 29, 29);
   border: none;
   padding: 15px 10%;
   color: white;
   font-size: 18px;
   display: flex;
   margin: 20px auto;
-  border-radius: 3px;
+  border-radius: 8px;
   position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-.knummer {
-  background-color: rgb(24, 81, 134);
+/* Beholder originale farger */
+button { background-color: rgb(212, 29, 29); }
+.knummer { background-color: rgb(24, 81, 134); }
+.Dnummer { background-color: rgb(20, 124, 20); }
+.Onummer { background-color: rgb(148, 29, 148); }
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  opacity: 0.95;
 }
 
-.Dnummer {
-  background-color: rgb(20, 124, 20);
-}
-
-.Onummer {
-  background-color: rgb(148, 29, 148);
-}
 /* Table */
 table {
   width: 80%;
   margin: 40px auto;
   border-collapse: collapse;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 th,
 td {
-  border: 1px solid white;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  border: 1px solid #ddd;
   padding: 12px 15px;
-  text-align: left;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 th {
@@ -116,24 +133,29 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #ddd;
+  transform: scale(1.01);
 }
 
+/* Links */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a button {
-    cursor: pointer;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 a button:hover {
-    background-color: #fff;
+  background-color: #fff;
+  color: inherit;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
   width: 100%;
-  padding: 25px;
+  padding: 30px;
   justify-content: center;
   font-size: 18px;
   color: black;
@@ -142,7 +164,8 @@ footer {
   position: sticky;
   bottom: 0;
   margin-top: auto;
-    box-shadow: 0px 0px 1px black;
+  box-shadow: 0 -6px 25px rgba(0,0,0,0.08);
+  border-radius: 12px 12px 0 0;
 }
 
 /* Responsiv */
@@ -154,17 +177,17 @@ footer {
 
   .navbar-list {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .container {
     width: 90%;
-    margin: 40px auto;
-    padding: 15px;
+    margin: 30px auto;
+    padding: 25px;
   }
 
   button {
-    padding: 12px 20%;
+    padding: 12px 25%;
     font-size: 16px;
   }
 
@@ -176,7 +199,7 @@ footer {
 
 @media (max-width: 480px) {
   .logo {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .navelements a {
@@ -184,7 +207,7 @@ footer {
   }
 
   .container h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .container p {
@@ -192,12 +215,12 @@ footer {
   }
 
   button {
-    padding: 10px 25%;
+    padding: 10px 30%;
     font-size: 14px;
   }
 
   footer {
     font-size: 16px;
-    padding: 20px 10px;
+    padding: 25px 10px;
   }
 }
